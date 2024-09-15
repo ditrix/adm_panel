@@ -20,8 +20,6 @@ class CheckStatus
      */
     public function handle(Request $request, Closure $next)
     {
-        //return $next($request);   /////// ???????????? ERROR ??
-        //$user = Auth::user();
         if(Auth::check() && Auth::user()->isAdministrator()) {
             return $next($request);
         } else {

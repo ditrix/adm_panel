@@ -27,13 +27,28 @@ class User extends Model
         'remember_token'
     ];
 
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected $casts = ['email_verified_at' => "datetime"];
+
+
 
     public function roles(): BelongsToMany
     {
         return $this->belongsToMany(Role::class, 'user_roles');
     }
+
+    // public function isAdministrator(): bool
+    // {
+    //     return $this->roles()->where('name')->exists();
+    // }
+
+    // public function isUser(): bool
+    // {
+    //     return $this->roles()->where('user')->exists();
+    // }
+
+    // public function isDisabled(): bool
+    // {
+    //     return $this->roles()->where('disabled')->exists();
+    // }
 
 }
