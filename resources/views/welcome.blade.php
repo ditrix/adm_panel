@@ -37,7 +37,7 @@
                         <ul class="navbar-nav ms-auto">
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
+                                <a class="nav-link" href="{{ url('/') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
                             </li>
                         @endguest
                         @auth
