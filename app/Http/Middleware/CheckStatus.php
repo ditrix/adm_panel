@@ -20,6 +20,15 @@ class CheckStatus
      */
     public function handle(Request $request, Closure $next)
     {
+        // администратор может пользоваться всеми ролями
+        /* дале код контроллера
+        ...
+        public function __construct() {
+            $this->middleware('auth');
+            $this->middleware('status');  <<<<< вот проверка статуса
+
+        */
+
         if(Auth::check() && Auth::user()->isAdministrator()) {
             return $next($request);
         } else {

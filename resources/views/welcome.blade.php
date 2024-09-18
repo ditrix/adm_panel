@@ -54,7 +54,7 @@
                                     <a class="nav-link" href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('/admin/index') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Cabinet</a>
+                                    <a class="nav-link" href="{{  url('/user/index') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Cabinet</a>
                                 </li>
                             @endif
                             @if(Auth::user()->isDisabled())

@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Blog\Admin\MainController;
+use App\Http\Controllers\Blog\Admin\MainController as AdminMainController;
+use App\Http\Controllers\Blog\User\MainController as UserMainController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,14 +27,21 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /** Admin routes */
 Route::group(['middleware' => ['status','auth']],function () {
 
-    $groupData = [
-//        'namespace' => 'Blog\Admin',    // !!!!!! from video начиная с laravel8 namespace не указывается 'Blog\Admin'
-        'prefix' => 'admin',
-    ];
+    Route::group(['prefix' => 'admin'], function() {
 
-    Route::group($groupData, function() {
-        Route::resource('index',MainController::class)
-            ->names('blog.admin.index');
-    });
+        Route::resource('index',AdminMainController::class)->names('blog.admin.index');
+   });
 
 });
+
+/** User routes */
+Route::group(['middleware' => ['auth']],function () {
+
+    Route::group(['prefix' => 'user'], function() {
+        Route::resource('index',UserMainController::class)->names('blog.user.index');
+    });
+});
+
+
+//Route::resource('user',UserMainController::class)->names('blog.user');
+
