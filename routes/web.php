@@ -34,7 +34,7 @@ Route::group(['middleware' => ['status','auth']],function () {
 
 });
 
-/** User routes */
+/* User routes */
 Route::group(['middleware' => ['auth']],function () {
 
     Route::group(['prefix' => 'user'], function() {

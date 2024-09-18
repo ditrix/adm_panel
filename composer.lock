@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7b61cf73de13f1f605052fcd6a6edaf",
+    "content-hash": "07e7fb51a4ff3aec98588463a07b9ac2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -561,6 +561,69 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
+        },
+        {
+            "name": "fomvasss/laravel-meta-tags",
+            "version": "3.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fomvasss/laravel-meta-tags.git",
+                "reference": "e7f89961a40914a6aa10d3a72f4f2e9f1de9146e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fomvasss/laravel-meta-tags/zipball/e7f89961a40914a6aa10d3a72f4f2e9f1de9146e",
+                "reference": "e7f89961a40914a6aa10d3a72f4f2e9f1de9146e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^5.8|^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^5.8|^6.0|^7.0|^8.0|^9.0",
+                "illuminate/view": "^5.8|^6.0|^7.0|^8.0|^9.0",
+                "php": ">=7.0.0"
+            },
+            "type": "composer-package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Fomvasss\\LaravelMetaTags\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "MetaTag": "Fomvasss\\LaravelMetaTags\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fomvasss\\LaravelMetaTags\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vasyl Fomin",
+                    "email": "fomvasss@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A package to manage SEO (meta-tags, xml-fields, etc.)",
+            "keywords": [
+                "Sitemap",
+                "laravel",
+                "meta",
+                "meta tags",
+                "seo",
+                "tags",
+                "xml-map"
+            ],
+            "support": {
+                "issues": "https://github.com/fomvasss/laravel-meta-tags/issues",
+                "source": "https://github.com/fomvasss/laravel-meta-tags/tree/3.5.2"
+            },
+            "time": "2022-10-13T08:56:08+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",
@@ -8028,5 +8091,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

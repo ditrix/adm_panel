@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Blog\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use MetaTag;
 
 class MainController extends Controller
 {
@@ -20,7 +21,7 @@ class MainController extends Controller
      */
     public function index()
     {
-      //  dd('here');
+        MetaTag::setTags(['title' => 'Cabinet']);
         return view('blog.user.index');
     }
 
