@@ -9,6 +9,6 @@
         @slot('active') @endslot
     @endcomponent
 </section>
-ADMIN HELLo
+ADMIN CONTENT
 
 @endsection
