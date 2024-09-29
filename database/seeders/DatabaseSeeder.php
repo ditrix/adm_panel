@@ -14,6 +14,7 @@ namespace Database\Seeders;
 
             $this->call(RolesTableSeeder::class);
             $this->call(UsersTableSeeder::class);
+            $this->call(SetRolesForUsersSeeder::class);
             $this->call(AttributeGroupsSeeder::class);
             $this->call(AttributeProductsSeeder::class);
             $this->call(AttributeValuesSeeder::class);
